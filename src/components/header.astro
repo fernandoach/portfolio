@@ -1,0 +1,104 @@
+---
+const title = 'Portfolio Web'
+const menuOptions = [
+	{
+		content: 'Proyectos',
+		href: '/'
+	},
+	{
+		content: 'Educación',
+		href: '/'
+	},
+	{
+		content: 'Habilidades',
+		href: '/'
+	}
+]
+
+const contact = {
+	content: 'Contáctame',
+	href: '/',
+    email: ''
+}
+---
+
+<header class="header">
+		<!-- navbar -->
+		<a class="header__link" href="/">
+			<h1 class="header__link__title">{ title }</h1>
+		</a>
+		<nav class="header__navbar">
+			{
+				menuOptions.map(
+					(item) => {
+						return (
+							<div class="header__navbar__option">
+								<a class="header__navbar__option__link" href={item.href}>{item.content}</a>
+							</div>
+						)
+					}
+				)
+			}
+		</nav>
+
+        <div class="header__contact">
+		    <a class="header__contact__link" href={contact.href}>{contact.content}</a>
+        </div> 
+</header>
+
+<style>
+    .header{
+        grid-area: header;
+
+        display: grid;
+        grid-template-rows: 3rem;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas: "header-link header-navbar header-contact";
+    }
+
+    .header__link{
+        grid-area: header-link;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__link__title{}
+    
+    .header__navbar{
+        grid-area: header-navbar;
+
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .header__navbar__option{
+        width: 100%;
+        height: 100%;
+        place-content: center;
+
+        display: flex;
+    }
+
+    .header__navbar__option__link{
+        margin: auto;
+    }
+
+    .header__contact{
+        grid-area: header-contact;
+
+        width: 100%;
+        height: 100%;
+
+        place-content: center;
+
+        display: flex;
+    }
+
+    .header__contact__link{
+        margin: auto;
+    }
+</style>
