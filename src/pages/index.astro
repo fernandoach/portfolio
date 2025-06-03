@@ -1,75 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/header.astro'
-
-const profession = {
-	imgSrc: 'imgs/professionImg.svg',
-	imgAlt: 'profession img',
-	content: 'Ing. de Sistemas Computacionales'
-}
-const name = 'Fernando A.'
-const role = {
-	imgSrc: 'imgs/roleImg.svg',
-	imgAlt: 'role img',
-	content: 'Programador'
-}
-const softSkills = [
-	{
-		content: 'Comunicación efectiva',
-		imgSrc: 'imgs/ss_communication.svg',
-		imgAlt: 'communication'
-	},
-	{
-		content: 'Trabajo en equipo',
-		imgSrc: 'imgs/ss_teamwork.svg',
-		imgAlt: 'teamwork'
-	},
-	{
-		content: 'Aprendizaje continuo',
-		imgSrc: 'imgs/ss_learning.svg',
-		imgAlt: 'learning'
-	},
-	{
-		content: 'Solución de problemas',
-		imgSrc: 'imgs/ss_troubleshooting.svg',
-		imgAlt: 'troubleshooting'
-	},
-]
-const phrase = ''
-const profileImg = {
-	src: '',
-	alt: ''
-}
+import AsideInfo from '../components/asideInfo.astro'
 ---
 
 <Layout>
-	<Header />
-	<aside>
-		<!-- INFO -->
-		<div>
-			<img src={ role.imgSrc } alt={ role.imgAlt }>
-			<small>{ role.content }</small>
-		</div>
-		<h2>{ name }</h2>
-		<p>{ phrase }</p>
-		<div>
-			<img src={profession.imgSrc} alt={profession.imgAlt}>
-			<h3>{ profession.content }</h3>
-		</div>
-		<img src={profileImg.src} alt={profileImg.alt} />
-		{
-			softSkills.map(
-				(item) => {
-					return (
-						<div>
-							<img src={item.imgSrc} alt={item.imgAlt} />
-							<h4>{item.content}</h4>
-						</div>
-					)
-				}
-			)
-		}
-	</aside>
+	{
+		//<Header />
+	}
+	<AsideInfo />
 	<aside>
 		<!-- FEED -->
 	</aside>

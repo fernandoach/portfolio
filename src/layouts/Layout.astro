@@ -13,6 +13,25 @@
 </html>
 
 <style>
+
+	@font-face {
+		font-family: "Mastodon";
+		src: url('/fonts/mastodon.woff2') format('woff2');
+	}
+	@font-face {
+		font-family: "EuroStyle";
+		src: url('/fonts/eurostyle.woff') format('woff');
+	}
+
+	:root{
+		--color-gray: #BEBEBE;
+		--color-black: #1F1F1F;
+		--color-white: #f2f2f2;
+		--color-green-50: #21721268;
+
+		--color-foreground: #545454;
+	}
+
 	* {
 		padding: 0;
 		margin: 0;
@@ -24,14 +43,13 @@
 		height: 100%;
 
 		display: grid;
-		grid-template-columns: 1fr 6fr 1fr;
-		grid-template-rows: 3rem repeat(4, auto);
+		grid-template-columns: 25vw 50vw 25vw;
+		grid-template-rows: 5vh 95vh;
 
 		grid-template-areas: 
-			"header header header"
-			"left-aside main right-aside"
-			"left-aside stats right-aside"
-			"left-aside education right-aside"
-			"footer footer footer";
+			"left-aside header header"
+			"left-aside main right-aside";
+
+		background-color: var(--color-black);
 	}
 </style>
