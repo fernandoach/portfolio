@@ -1,0 +1,18 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 25vw 50vw 25vw;
+  grid-template-rows: 10vh 90vh;
+
+  grid-template-areas:
+    "left-aside header header"
+    "left-aside page page";
+
+  background-color: var(--color-black);
+}
+
+.page{
+  grid-area: page;
+}

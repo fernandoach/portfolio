@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Mastodon";
+  src: url("/fonts/mastodon.woff2") format("woff2");
+}
+@font-face {
+  font-family: "EuroStyle";
+  src: url("/fonts/eurostyle.woff") format("woff");
+}
+
+:root {
+  --color-gray: #bebebe;
+  --color-black: #1f1f1f;
+  --color-white: #f2f2f2;
+  --color-green: #21721268;
+  --color-blue: #3838dd;
+  --color-red: #c84242;
+  --color-skyblue: #2cc5dc;
+  --color-foreground: #545454;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
