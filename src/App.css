@@ -11,6 +11,7 @@
     "left-aside page page";
 
   background-color: var(--color-black);
+    overflow: hidden;
 }
 
 .page{

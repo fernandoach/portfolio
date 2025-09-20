@@ -1,4 +1,4 @@
-import './leftAside.css'
+import styles from './leftAside.module.css'
 
 function LeftAside() {
   const name = "Miguel A.";
@@ -51,55 +51,55 @@ function LeftAside() {
   };
 
   return (
-    <aside className="info">
-      <div className="info__role">
+    <aside className={styles.info}>
+      <div className={styles.info__role}>
         <img
           loading={"eager"}
-          className="info__role__img"
+          className={styles.info__role__img}
           src={role.imgSrc}
           alt={role.imgAlt}
         />
-        <small className="info__role__text">{role.content}</small>
+        <small className={styles.info__role__text}>{role.content}</small>
       </div>
-      <h2 className="info__name">{name}</h2>
-      <p className="info__phrase">{phrase}</p>
-      <div className="info__profession">
+      <h2 className={styles.info__name}>{name}</h2>
+      <p className={styles.info__phrase}>{phrase}</p>
+      <div className={styles.info__profession}>
         <img
           loading={"eager"}
-          className="info__profession__img"
+          className={styles.info__profession__img}
           src={profession.imgSrc}
           alt={profession.imgAlt}
         />
-        <h3 className="info__profession__text">{profession.content}</h3>
+        <h3 className={styles.info__profession__text}>{profession.content}</h3>
       </div>
       <img
         loading={"eager"}
-        className="info__profile-img"
+        className={styles.info__profile__img}
         src={profileImg.src}
         alt={profileImg.alt}
       />
-      <div className="info__soft-skills">
+      <div className={styles.info__softskills}>
         {softSkills.map((item) => {
           return (
-            <div key={item.content} className="info__soft-skills__item">
+            <div key={item.content} className={styles.info__softskills__item}>
               <span />
               <span />
               <span />
               <span />
               <img
                 loading={"eager"}
-                className="info__soft-skills__item__img"
+                className={styles.info__softskills__item__img}
                 src={item.imgSrc}
                 alt={item.imgAlt}
               />
-              <h4 className="info__soft-skills__item__text">{item.content}</h4>
-              <div className="info__soft-skills__item__stars">
+              <h4 className={styles.info__softskills__item__text}>{item.content}</h4>
+              <div className={styles.info__softskills__item__stars}>
                 {Array.from({ length: 5 }).map((_, pos) => {
                   return (
                     <img
                       key={`star${pos}`}
                       loading={"eager"}
-                      className="info__soft-skills__item__stars__img"
+                      className={styles.info__softskills__item__stars__img}
                       src={
                         pos < item.stars
                           ? "/imgs/star.svg"

@@ -1,5 +1,5 @@
 import { GrActions, GrBook, GrPhone, GrProjects } from "react-icons/gr";
-import "./navbar.css";
+import styles from "./navbar.module.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -27,13 +27,13 @@ function Navbar() {
   ];
 
   return (
-    <nav className="navbar">
+    <nav className={styles.navbar}>
       {menuOptions.map((item) => {
         return (
-          <div key={`${item.href}-${item.content}`} className="navbar__option">
-            <Link className="navbar__option__link" to={item.href}>
+          <div key={`${item.href}-${item.content}`} className={styles.navbar__option}>
+            <Link className={styles.navbar__option__link} to={item.href}>
               <item.icon size={25} />
-              <span className="navbar__option__link__span">{item.content}</span>
+              <span className={styles.navbar__option__link__span}>{item.content}</span>
             </Link>
           </div>
         );

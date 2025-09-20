@@ -80,20 +80,20 @@
   animation: profession-text-colors 1.5s alternate infinite ease-in;
 }
 
-.info__profile-img {
+.info__profile__img {
   width: 90%;
   height: 90%;
   padding: 0.3rem 0;
 }
 
-.info__soft-skills {
+.info__softskills {
   display: grid;
   gap: 0.3rem;
 
   place-items: center;
 }
 
-.info__soft-skills__item {
+.info__softskills__item {
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.8fr;
   grid-template-areas: "soft-skill__img soft-skill__text soft-skill__stars";
@@ -111,12 +111,12 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.info__soft-skills__item:hover {
+.info__softskills__item:hover {
   transform: scale(1.03);
   background-color: var(--color-black);
 }
 
-.info__soft-skills__item span {
+.info__softskills__item span {
   position: absolute;
   background: linear-gradient(
     to right,
@@ -130,74 +130,74 @@
   z-index: 10;
 }
 
-.info__soft-skills__item:hover span {
+.info__softskills__item:hover span {
   opacity: 1;
   pointer-events: auto;
 }
 
-.info__soft-skills__item span:nth-child(1) {
+.info__softskills__item span:nth-child(1) {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 0.5rem;
   background: linear-gradient(to right, transparent, var(--color-skyblue));
-  animation: soft-skills__item--a1 2s linear infinite;
+  animation: softskills__item--a1 2s linear infinite;
 }
-.info__soft-skills__item span:nth-child(2) {
+.info__softskills__item span:nth-child(2) {
   position: absolute;
   top: 0;
   right: 0;
   width: 0.5rem;
   height: 100%;
   background: linear-gradient(to bottom, transparent, var(--color-skyblue));
-  animation: soft-skills__item--a2 2s linear infinite;
+  animation: softskills__item--a2 2s linear infinite;
   animation-delay: 1s;
 }
-.info__soft-skills__item span:nth-child(3) {
+.info__softskills__item span:nth-child(3) {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 0.5rem;
   background: linear-gradient(to left, transparent, var(--color-skyblue));
-  animation: soft-skills__item--a3 2s linear infinite;
+  animation: softskills__item--a3 2s linear infinite;
   animation-delay: 2s;
 }
-.info__soft-skills__item span:nth-child(4) {
+.info__softskills__item span:nth-child(4) {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0.5rem;
   height: 100%;
   background: linear-gradient(to top, transparent, var(--color-skyblue));
-  animation: soft-skills__item--a4 2s linear infinite;
+  animation: softskills__item--a4 2s linear infinite;
   animation-delay: 3s;
 }
 
-.info__soft-skills__item__img {
+.info__softskills__item__img {
   width: 1.5rem;
   height: 1.5rem;
   margin: auto;
 }
 
-.info__soft-skills__item__text {
+.info__softskills__item__text {
   text-align: start;
   color: var(--color-white);
 
   font-family: "EuroStyle";
 }
 
-.info__soft-skills__item__text:hover {
+.info__softskills__item__text:hover {
   cursor: default;
 }
 
-.info__soft-skills__item__stars {
+.info__softskills__item__stars {
   display: flex;
   margin: auto;
 }
 
-.info__soft-skills__item__stars__img {
+.info__softskills__item__stars__img {
   width: 0.8rem;
   height: 0.8rem;
 }
@@ -262,7 +262,7 @@
   }
 }
 
-@keyframes soft-skills__item--a1 {
+@keyframes softskills__item--a1 {
   0% {
     transform: translateX(-100%);
   }
@@ -271,7 +271,7 @@
   }
 }
 
-@keyframes soft-skills__item--a2 {
+@keyframes softskills__item--a2 {
   0% {
     transform: translateY(-100%);
   }
@@ -280,7 +280,7 @@
   }
 }
 
-@keyframes soft-skills__item--a3 {
+@keyframes softskills__item--a3 {
   0% {
     transform: translateX(100%);
   }
@@ -289,7 +289,7 @@
   }
 }
 
-@keyframes soft-skills__item--a4 {
+@keyframes softskills__item--a4 {
   0% {
     transform: translateY(100%);
   }
